@@ -1,0 +1,171 @@
+.campaign-form {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px solid #e6ece4;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.campaign-form h3,
+.campaign-form h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #17352b;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form-grid label,
+.campaign-form > label {
+  display: grid;
+  gap: 7px;
+  color: #43584a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.campaign-form input,
+.campaign-form select,
+.campaign-form textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #dfe7de;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #203d2e;
+  font: inherit;
+}
+
+.campaign-form input:not([type="file"]),
+.campaign-form select:not([multiple]) {
+  min-height: 42px;
+}
+
+.campaign-form input[type="file"] {
+  padding: 8px;
+  font-size: 10px;
+}
+
+.campaign-form select[multiple] {
+  min-height: 110px;
+}
+
+.campaign-form textarea {
+  resize: vertical;
+}
+
+.form-grid-wide {
+  grid-column: 1 / -1;
+}
+
+.resubmission-form {
+  padding: 13px;
+  background: #fffdf9;
+}
+
+.campaign-required-items {
+  grid-column: 1 / -1;
+  padding-top: 8px;
+}
+
+.campaign-required-items h3 {
+  font-size: 14px;
+}
+
+.required-items-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.required-items-list li {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid #e4eae4;
+  border-radius: 9px;
+  font-size: 11px;
+}
+
+.required-items-list li span {
+  color: #718078;
+}
+
+.file-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.file-action-row button,
+.management-record > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #145c45;
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.public-update-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.public-update-photos img,
+.public-update-photos .campaign-image-fallback {
+  width: 100%;
+  height: 130px;
+  min-height: 130px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #edf5ee;
+}
+
+.public-update-list {
+  display: grid;
+  gap: 12px;
+}
+
+.public-update-list article {
+  padding: 15px;
+  border: 1px solid #e6ece4;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.public-update-list h4 {
+  margin: 0 0 6px;
+  color: #17352b;
+}
+
+.public-update-list small {
+  color: #718078;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid-wide {
+    grid-column: auto;
+  }
+}

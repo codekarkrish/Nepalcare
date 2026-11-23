@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import { apply, getCertificate, mine, ngoList, respondToOffer, review, uploadCertificate } from '../controllers/volunteer.controller.js';
+import { authenticate,requireRole } from '../middleware/auth.js';
+import privateFileUpload from '../middleware/privateFileUpload.js';
+const router=Router();
+router.post('/',authenticate,requireRole('CITIZEN'),apply);
+router.get('/mine',authenticate,requireRole('CITIZEN'),mine);
+router.get('/ngo',authenticate,requireRole('NGO'),ngoList);
+router.patch('/:id/response',authenticate,requireRole('CITIZEN'),respondToOffer);
+router.post('/:id/certificate',authenticate,requireRole('CITIZEN'),privateFileUpload.single('certificate'),uploadCertificate);
+router.get('/:id/certificate',authenticate,requireRole('CITIZEN'),getCertificate);
+router.patch('/:id/review',authenticate,requireRole('NGO'),review);
+export default router;

@@ -1,0 +1,3 @@
+import { HeartHandshake, ShieldCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
+export default function Footer() { return <footer className="footer"><div className="container footer-inner"><div className="footer-brand"><HeartHandshake size={22}/><strong>NepalCare</strong><span>Community-powered relief, rooted in Nepal.</span></div><nav className="footer-links" aria-label="Footer navigation"><Link to="/campaigns">Explore campaigns</Link><Link to="/register">Join NepalCare</Link><Link to="/login">Sign in</Link></nav><div className="footer-trust"><ShieldCheck size={18}/> Designed for accountability <span>© {new Date().getFullYear()} NepalCare</span></div></div></footer>; }
